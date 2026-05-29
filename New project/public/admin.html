@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | Your Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/admin.js"></script>
+  </head>
+  <body>
+    <main class="admin-page">
+      <section class="admin-card" data-login-panel>
+        <p class="eyebrow">Admin</p>
+        <h1>Review submissions</h1>
+        <p class="lede">Enter your admin password to view saved form entries.</p>
+        <form class="form-grid" data-login-form>
+          <div class="notice" data-login-notice hidden></div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" required type="password" />
+          </div>
+          <button class="button" type="submit">Open dashboard</button>
+        </form>
+      </section>
+
+      <section data-dashboard hidden>
+        <div class="admin-header">
+          <div>
+            <p class="eyebrow" data-brand>Your Studio</p>
+            <h1>Submissions</h1>
+            <p data-count>Loading entries.</p>
+          </div>
+          <button class="button secondary" data-logout type="button">Log out</button>
+        </div>
+        <div class="admin-card">
+          <div data-empty class="empty" hidden>No submissions yet.</div>
+          <div class="table-wrap" data-table-wrap hidden>
+            <table>
+              <thead data-table-head></thead>
+              <tbody data-table-body></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

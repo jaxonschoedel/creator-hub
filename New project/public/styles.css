@@ -1,0 +1,405 @@
+:root {
+  --background: #f7f4ee;
+  --ink: #191816;
+  --muted: #6f6a61;
+  --panel: #fffdf8;
+  --accent: #0f766e;
+  --accent-dark: #0c4f4a;
+  --line: #ded7ca;
+  --danger: #9f1239;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.nav {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 22px 24px;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.admin-link {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink) !important;
+  padding: 9px 13px;
+}
+
+.hero {
+  display: grid;
+  gap: 44px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 64px 24px 48px;
+}
+
+.eyebrow {
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.75rem);
+  letter-spacing: 0;
+  line-height: 0.93;
+  margin-bottom: 24px;
+  max-width: 780px;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 660px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  align-items: center;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.social-panel {
+  align-self: start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(25, 24, 22, 0.08);
+  padding: 24px;
+}
+
+.social-panel h2,
+.form-copy h2,
+.admin-card h1 {
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.social-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-item {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.social-label {
+  display: block;
+  font-weight: 800;
+}
+
+.social-handle {
+  color: var(--muted);
+  display: block;
+  font-size: 0.92rem;
+  margin-top: 2px;
+}
+
+.arrow {
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.highlights {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
+}
+
+.highlight {
+  border-right: 1px solid var(--line);
+  font-weight: 850;
+  padding: 24px;
+  text-align: center;
+}
+
+.highlight:last-child {
+  border-right: 0;
+}
+
+.form-section {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(320px, 1.2fr);
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 58px 24px 74px;
+}
+
+.form-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.form-card,
+.admin-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  min-height: 46px;
+  padding: 12px;
+  width: 100%;
+}
+
+.field textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.notice {
+  border-radius: 8px;
+  font-weight: 800;
+  padding: 12px;
+}
+
+.notice.success {
+  background: #d9f4ec;
+  color: #064e3b;
+}
+
+.notice.error {
+  background: #ffe4e6;
+  color: var(--danger);
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 24px;
+}
+
+.admin-page {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 34px 24px 70px;
+}
+
+.admin-header {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.admin-header p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 820px;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+td {
+  line-height: 1.5;
+}
+
+.empty {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 22px;
+}
+
+[data-login-panel] {
+  margin: 10vh auto 0;
+  max-width: 460px;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .form-section {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlight:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  h1 {
+    font-size: 3.15rem;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    border-right: 0;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

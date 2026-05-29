@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A publish-ready social hub with a custom form and private submissions dashboard."
+    />
+    <title>Your Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <main class="site-shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" data-brand href="/">Your Studio</a>
+        <div class="nav-links">
+          <a href="#socials">Socials</a>
+          <a href="#inquiry">Form</a>
+          <a class="admin-link" href="/admin.html">Admin</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow" data-location></p>
+          <h1 data-brand>Your Studio</h1>
+          <p class="lede" data-description></p>
+          <div class="actions">
+            <a class="button" data-cta href="#inquiry">Send an inquiry</a>
+            <a class="button secondary" data-email-link href="mailto:hello@example.com">
+              Email directly
+            </a>
+          </div>
+        </div>
+
+        <aside class="social-panel" id="socials">
+          <p class="eyebrow">Find us online</p>
+          <h2 data-tagline></h2>
+          <div class="social-list" data-socials></div>
+        </aside>
+      </section>
+
+      <section class="highlights" data-highlights aria-label="Highlights"></section>
+
+      <section class="form-section" id="inquiry">
+        <div class="form-copy">
+          <p class="eyebrow">Custom form</p>
+          <h2 data-form-title></h2>
+          <p data-form-intro></p>
+        </div>
+        <form class="form-card" data-inquiry-form>
+          <div class="notice" data-form-notice hidden></div>
+          <div class="form-grid" data-form-fields></div>
+          <button class="button" type="submit">Send an inquiry</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <span data-brand>Your Studio</span>
+        <a data-email-text data-email-link href="mailto:hello@example.com">hello@example.com</a>
+      </footer>
+    </main>
+  </body>
+</html>

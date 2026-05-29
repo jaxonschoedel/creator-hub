@@ -1,0 +1,7 @@
+name = "creator-hub"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "creator-hub"
+database_id = "replace-with-your-d1-database-id"
